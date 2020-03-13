@@ -1,0 +1,14 @@
+@import 'reset.scss';
+@import 'grid.scss';
+@import 'layout.scss';
+
+*{
+  box-sizing: border-box;
+}
+
+.flex-grid>div>*{
+  min-height: 5rem;
+  // background-color: #fff;
+  border: 1px gray solid;
+
+}

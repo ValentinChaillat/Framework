@@ -1,0 +1,61 @@
+$primarycolor:gray;
+$nbcols:12;
+$margin:20px;
+$nbmargin:200px;
+$color: #036;
+body{
+  background-color: $primarycolor;
+}
+.flex-grid{
+  overflow: hidden;
+    > div{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: - $margin;
+      > * {
+          margin-right: $margin;
+          margin-bottom: $margin;
+      }
+    }
+}
+.justiContent-center{
+  justify-content: center;
+}
+.justiContent-spaceBetween{
+  justify-content: space-between;
+}
+.alignItems-baseline{
+  align-items: baseline;
+}
+.alignItems-flexEnd{
+align-items: flex-end; 
+}
+.alignContent-spaceBetween{
+  align-content: space-between;
+}
+.alignContent-spaceAround{
+  align-content: space-around;
+}
+
+
+@for $i from 1 through $nbcols{
+  .col-#{$i}{
+    flex-basis: calc(#{$i} * 100% / #{$nbcols} - #{$margin});
+    background-color: lighten($color, $i * 5%);
+  }
+  @media (max-width:700px) {
+    .col-small-#{$i}{
+      flex-basis: calc(#{$i} * 100% / #{$nbcols} - #{$margin});
+    }
+  }
+  @media (max-width:1024px) {
+    .col-medium-#{$i}{
+      flex-basis: calc(#{$i} * 100% / #{$nbcols} - #{$margin});
+    }
+  }
+  @media (max-width:1240px) {
+    .col-large-#{$i}{
+      flex-basis: calc(#{$i} * 100% / #{$nbcols} - #{$margin});
+    }
+  }
+}
