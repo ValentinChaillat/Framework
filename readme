@@ -1,0 +1,18 @@
+classe disponible:
+
+grille de largeur d'écran allant de 1 à i (i vaut 12 ici):
+tous les écrans  :   .col-$i
+700px            :   .col-small-$i
+1024px           :   .col-medium-$i
+1240px           :   .col-large-$i
+
+
+Emplacement des items:
+.justiContent-center
+.justiContent-spaceBetween
+.alignItems-baseline
+.alignItems-flexEnd
+.alignContent-spaceBetween
+.alignContent-spaceAround
+
+.flex-grid
